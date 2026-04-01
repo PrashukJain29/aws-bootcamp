@@ -9,11 +9,18 @@
 	"build": {
         "context": ".",
         "dockerfile": "Dockerfile"
-    }
+    },
 	// Features add additional features to your environment. See https://containers.dev/features
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"version": "lts"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"42Crunch.vscode-openapi"
+			]
 		}
 	}
 }

@@ -1,0 +1,16 @@
+tasks:
+  install-deps:
+    name: Install dependencies
+    description: Install backend Python packages and frontend Node packages
+    command: |
+      # Backend
+      python3 -m venv /workspaces/aws-bootcamp/backend-flask/venv
+      /workspaces/aws-bootcamp/backend-flask/venv/bin/pip install -r /workspaces/aws-bootcamp/backend-flask/requirements.txt
+
+      # Frontend
+      cd /workspaces/aws-bootcamp/frontend-react-js && npm install
+
+      # AWS CLI auto-prompt
+      echo 'export AWS_CLI_AUTO_PROMPT=on-partial' >> ~/.bashrc
+    triggeredBy:
+      - postDevcontainerStart
