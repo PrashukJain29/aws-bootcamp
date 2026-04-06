@@ -23,5 +23,7 @@
 				"42Crunch.vscode-openapi"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "bash .devcontainer/setup.sh",
+	"postStartCommand": "echo 'Environment ready. Backend at http://localhost:3001, Frontend at http://localhost:3000'"
 }
