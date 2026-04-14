@@ -8,5 +8,6 @@ opentelemetry-instrumentation-flask
 opentelemetry-instrumentation-requests
 aws-xray-sdk
 watchtower
-blinker
-rollbar
+rollbar>=0.16.0
+flask>=2.0.0
+blinker>=1.5

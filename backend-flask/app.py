@@ -111,10 +111,14 @@ def data_message_groups():
     #LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
     #return response
 
-@app.route('/rollbar/test')
-def rollbar_test():
-    rollbar.report_message('Hello World!', 'warning')
-    return "Hello World!"
+@app.route('/')
+def index():
+    return 'Hello World!'
+
+@app.route('/error')
+def trigger_error():
+    """Trigger a test error for Rollbar."""
+    raise Exception('Test error from Flask')
 
 @app.route("/api/messages/@<string:handle>", methods=['GET'])
 def data_messages(handle):
