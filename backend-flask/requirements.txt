@@ -11,3 +11,5 @@ watchtower
 rollbar>=0.16.0
 flask>=2.0.0
 blinker>=1.5
+
+Flask-AWSCognito
